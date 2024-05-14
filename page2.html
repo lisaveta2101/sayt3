@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    button {
+      background-color: #e7c1e7; /* Цвет фона */
+      border: 1px solid #b867c9; /* Цвет рамки */
+      color: rgb(0, 0, 0); /* Цвет текста */
+      cursor: pointer; /* Стиль курсора */
+    }
+    </style>
+        <script src="/scripts/snippet-javascript-console.min.js?v=1"></script>
+        <title>Милые котики</title>
+</head>
+<body style=background-color:#fde8ff>
+<h1>Итак, ты сегодня...</h1>
+<img src="image3.jpg" style="width:350px;"><br>
+<img src="image4.jpg" style="width:350px;"><br>
+<img src="image5.jpg" style="width:350px;"><br>
+<img src="i.jpg" style="width:350px;"><br>
+<img src="image2.jpg" style="width:350px;"><br>
+<button class="btn btn-success clk_btn" onclick="myfunction()">Тыкни, чтобы узнать</button>
+<p id="result"></p>
+<script type="text/javascript">
+        let images = document.getElementsByTagName('img');
+for(let i = 0; i < images.length; i++)
+  images[i].setAttribute('hidden', true);
+function myfunction()
+{
+  let images = document.getElementsByTagName('img');
+  
+  for(let i = 0; i < images.length; i++)
+    images[i].setAttribute('hidden', true);
+  let rand = Math.floor(Math.random()*images.length);
+  images[rand].removeAttribute('hidden');
+}
+    </script>
+    <h3>Вот такой милейший котенок</h3>
+    <button type="button" onclick="location.href='page3.html'">Нажми, чтобы закончить игру</button>
+</body>
+</html>
